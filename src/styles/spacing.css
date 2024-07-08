@@ -1,7 +1,4 @@
 :root {
-  --primary-color: #18181b;
-  --secondary-color: #e7e4e4;
-
   --spacing-0: 0;
   --spacing-1: 0.25rem; /* 4px */
   --spacing-2: 0.5rem;  /* 8px */
@@ -20,6 +17,4 @@
   --spacing-48: 12rem;  /* 192px */
   --spacing-56: 14rem;  /* 224px */
   --spacing-64: 16rem;  /* 256px */
-
-  --radius: 4px;
 }
