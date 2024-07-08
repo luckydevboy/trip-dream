@@ -3,3 +3,9 @@
   <p class="text-2xl">Search for accommodations, compare prices, and book your next trip.</p>
   <sh-search class="mt-12" />
 </section>
+
+<section class="grid grid-cols-4 p-6 gap-6">
+  @for (accommodation of accommodations; let i = $index; track i) {
+    <sh-accommodation-card />
+  }
+</section>
