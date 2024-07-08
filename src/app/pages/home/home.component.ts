@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
 
-import { SearchComponent } from '@shared/components';
+import {
+  AccommodationCardComponent,
+  SearchComponent,
+} from '@shared/components';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [SearchComponent, SearchComponent],
+  imports: [SearchComponent, SearchComponent, AccommodationCardComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
-export class HomeComponent {}
+export class HomeComponent {
+  accommodations = Array.from({ length: 10 });
+}
