@@ -2,7 +2,7 @@ input {
   outline: none;
   border: 1px solid var(--secondary-color);
   padding: var(--spacing-2) var(--spacing-3);
-  border-radius: var(--radius);
+  border-radius: var(--border-radius);
 
   &:focus {
     outline: 1px solid var(--primary-color);
