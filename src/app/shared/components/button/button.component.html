@@ -1,5 +1,5 @@
 <button
-  [ngClass]="{ primary: variant === 'primary' }"
+  [ngClass]="{ btn: true, 'btn-primary': variant === 'primary' }"
   [type]="type"
   (click)="handleClick()"
   [disabled]="disabled"

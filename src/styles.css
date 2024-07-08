@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply rounded-md h-9 px-4 hover:opacity-90 transition-colors focus:outline-1;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white focus:outline-secondary;
+  }
+
+  .input {
+    @apply border border-secondary rounded-md h-9 px-4 focus:outline-1 focus:outline-primary;
+  }
+}
