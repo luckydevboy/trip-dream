@@ -12,6 +12,6 @@
   }
 
   .input {
-    @apply border border-secondary rounded-md h-9 px-4 focus:outline-1 focus:outline-primary;
+    @apply caret-primary text-primary bg-white border border-secondary rounded-md h-9 px-4 focus:outline-1 focus:outline-primary;
   }
 }

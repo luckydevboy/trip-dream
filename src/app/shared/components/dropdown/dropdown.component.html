@@ -1,0 +1,35 @@
+<div class="relative">
+  <div class="input flex items-center cursor-pointer" (click)="isOpen = !isOpen">
+    <div class="text-placeholder">{{ selectedOpt?.name || placeholder }}</div>
+    <div class="text-secondary ml-auto">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+        [ngClass]="{ 'rotate-180': isOpen }"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m19.5 8.25-7.5 7.5-7.5-7.5"
+        />
+      </svg>
+    </div>
+  </div>
+
+  @if (isOpen) {
+    <div class="absolute bg-white shadow-md rounded-md p-4 w-full top-10">
+      @for (option of options; track option.value) {
+        <div
+          (click)="handleClick(option)"
+          class="px-4 h-9 flex items-center rounded-md hover:bg-secondary"
+        >
+          {{ option.name }}
+        </div>
+      }
+    </div>
+  }
+</div>
