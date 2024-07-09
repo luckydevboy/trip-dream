@@ -2,7 +2,7 @@ import { inject, Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 
 import { environment } from '@env/environment.development';
-import { Accommodation, Pagination } from '@core/interfaces';
+import { Accommodation, Response } from '@core/interfaces';
 
 @Injectable({
   providedIn: 'root',
@@ -23,7 +23,7 @@ export class AccommodationService {
       httpParams = httpParams.set('pageSize', String(params.pageSize));
     }
 
-    return this.https.get<{ pagination: Pagination; data: Accommodation[] }>(
+    return this.https.get<Response<Accommodation[]>>(
       `${environment.apiUrl}/accommodations`,
       {
         params: httpParams,
@@ -32,6 +32,9 @@ export class AccommodationService {
   }
 
   getAccommodation(id: number) {
-    return this.https.get(`${environment.apiUrl}/accommodations/${id}`, {});
+    return this.https.get<Response<Accommodation>>(
+      `${environment.apiUrl}/accommodations/${id}`,
+      {},
+    );
   }
 }

@@ -1,22 +1,30 @@
 <section class="max-w-2xl mx-auto my-12">
-  <h1 class="font-bold text-2xl">Lorem ipsum dolor sit amet.</h1>
+  <h1 class="font-bold text-2xl">{{ data.title }}</h1>
   <p class="mt-2 mb-8">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aut commodi,
-    dicta, dignissimos dolorem doloribus earum eos eveniet maxime molestias
-    nesciunt obcaecati odio porro possimus praesentium quidem repellendus sit
-    ut.
+    {{ data.description }}
   </p>
-  <!-- Image Carousel -->
+
+  <p-carousel [value]="data.images" [numVisible]="1" [numScroll]="1">
+    <ng-template let-img pTemplate="item">
+      <img [src]="img" alt="" class="w-full rounded-lg">
+    </ng-template>
+  </p-carousel>
+
   <h2 class="font-semibold text-lg mb-2">Amenities:</h2>
-  <ul class="list-disc list-inside">
-    <li>Free Wi-Fi</li>
-    <li>Television</li>
-    <li>Tea/Coffee Making Facilities</li>
-    <li>Mini Fridge</li>
-    <li>Fitness Center/Gym</li>
+  <ul class="space-y-2">
+    <li class="flex items-center gap-x-2">
+      <img src="assets/icons/wifi.svg" width="24" height="24" />Free Wi-Fi
+    </li>
+    <li class="flex items-center gap-x-2">
+      <img src="assets/icons/tv.svg" width="24" height="24" />Television
+    </li>
+    <li class="flex items-center gap-x-2">
+      <img src="assets/icons/bolt.svg" width="24" height="24" />Car Charging
+    </li>
   </ul>
+
   <div class="flex flex-col items-end space-y-2">
-    <div class="font-medium text-lg">$200</div>
+    <div class="font-medium text-lg">${{data.price}}</div>
     <sh-button>Reserve</sh-button>
   </div>
 </section>
