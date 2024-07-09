@@ -14,7 +14,6 @@ export class StarsComponent implements OnInit {
 
   ngOnInit() {
     this.starsList = Array.from({ length: 5 }).map((_, i) => {
-      console.log(i, this.stars, i < this.stars);
       return i < this.stars;
     });
   }

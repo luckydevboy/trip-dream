@@ -6,6 +6,6 @@
 
 <section class="grid grid-cols-4 p-6 gap-6">
   @for (accommodation of accommodations; let i = $index; track i) {
-    <sh-accommodation-card />
+    <sh-accommodation-card [data]="accommodation" />
   }
 </section>
