@@ -19,7 +19,9 @@
     <p class="line-clamp-2">{{ data.summary }}</p>
     <div class="flex items-center justify-between mt-auto">
       <div class="font-semibold">${{ data.price }}/night</div>
-      <sh-button>Book Now</sh-button>
+      <a [routerLink]="'accommodations/' + data._id">
+        <sh-button>Book Now</sh-button>
+      </a>
     </div>
   </div>
 </div>

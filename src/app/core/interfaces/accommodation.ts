@@ -1,4 +1,5 @@
 export interface Accommodation {
+  _id: string;
   title: string;
   images: string[];
   rating: number;
