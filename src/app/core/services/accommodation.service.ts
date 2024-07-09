@@ -16,11 +16,11 @@ export class AccommodationService {
     let httpParams = new HttpParams();
 
     if (params?.page) {
-      httpParams.set('page', String(params.page));
+      httpParams = httpParams.set('page', String(params.page));
     }
 
     if (params?.pageSize) {
-      httpParams.set('pageSize', String(params.pageSize));
+      httpParams = httpParams.set('pageSize', String(params.pageSize));
     }
 
     return this.https.get<{ pagination: Pagination; data: Accommodation[] }>(
