@@ -17,7 +17,8 @@ import {
 export class SearchComponent {
   @Input() class!: string;
 
-  defaultClasses = 'bg-white inline-flex rounded-lg p-4 gap-x-4';
+  defaultClasses =
+    'bg-white inline-flex flex-col gap-y-4 w-96 rounded-lg p-4 gap-x-4';
 
   get classes() {
     if (this.class) {
