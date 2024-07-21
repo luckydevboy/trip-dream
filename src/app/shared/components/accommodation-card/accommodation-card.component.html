@@ -1,5 +1,5 @@
-<div class="rounded-lg overflow-hidden border border-secondary">
-  <div class="h-52 relative">
+<a [routerLink]="'accommodations/' + data._id" class="hover:scale-105 block transition-transform">
+  <div class="h-52 relative rounded-xl overflow-hidden">
     <img
       [ngSrc]="data.images[0]"
       [alt]="data.title"
@@ -7,21 +7,8 @@
       style="object-fit: cover"
     />
   </div>
-  <div class="p-4 h-[192px] flex flex-col gap-y-2">
-    <h1 class="font-bold text-xl line-clamp-1">{{ data.title }}</h1>
-    <div class="flex items-center justify-between">
-      <sh-stars [stars]="data.stars" />
-      <div class="flex gap-x-1 items-center text-sm">
-        <div>{{ data.rating }}</div>
-        <div>({{ data.reviews }} reviews)</div>
-      </div>
-    </div>
-    <p class="line-clamp-2">{{ data.summary }}</p>
-    <div class="flex items-center justify-between mt-auto">
-      <div class="font-semibold">${{ data.price }}/night</div>
-      <a [routerLink]="'accommodations/' + data._id">
-        <sh-button>Book Now</sh-button>
-      </a>
-    </div>
-  </div>
-</div>
+  <h1 class="font-bold mt-4">{{ data.title }}</h1>
+  <span class="font-black text-blue-500">$</span>{{ " "
+  }}<span>{{ data.price }}</span
+  >{{ " " }}<span class="text-zinc-500">starting</span>
+</a>

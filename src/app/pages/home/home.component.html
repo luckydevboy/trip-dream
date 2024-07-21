@@ -1,11 +1,15 @@
 <div class="container mx-auto">
-  <section class="flex items-center justify-between my-12 gap-x-6">
+  <section class="flex items-center justify-between mt-12 mb-24 gap-x-6">
     <div class="space-y-4">
-      <h1 class="font-black text-7xl">Let's <span class="underline decoration-orange-500 decoration-4">travel</span> the world</h1>
-      <p class="font-medium text-zinc-500 text-lg"
-        >Enjoy the breathtaking view of the nature. Relax and cherish your
-        dreams to the fullest.</p
-      >
+      <h1 class="font-black text-7xl">
+        Let's
+        <span class="underline decoration-orange-500 decoration-4">travel</span>
+        the world
+      </h1>
+      <p class="font-medium text-zinc-500 text-lg">
+        Enjoy the breathtaking view of the nature. Relax and cherish your dreams
+        to the fullest.
+      </p>
     </div>
     <div class="flex items-center gap-x-6">
       <div class="space-y-6">
@@ -45,15 +49,18 @@
   <!--  <sh-search class="mt-12" />-->
   <!--</section>-->
 
-  <!--<section-->
-  <!--  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 p-6 gap-6"-->
-  <!--  infinite-scroll-->
-  <!--  [infiniteScrollDistance]="2"-->
-  <!--  [infiniteScrollThrottle]="50"-->
-  <!--  (scrolled)="onScroll()"-->
-  <!--&gt;-->
-  <!--  @for (accommodation of accommodations; let i = $index; track i) {-->
-  <!--    <sh-accommodation-card [data]="accommodation" />-->
-  <!--  }-->
-  <!--</section>-->
+  <section
+    class="container mx-auto"
+    infinite-scroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="50"
+    (scrolled)="onScroll()"
+  >
+    <h1 class="font-bold text-4xl mb-8">Popular destination</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-x-6 gap-y-10">
+      @for (accommodation of accommodations; let i = $index; track i) {
+        <sh-accommodation-card [data]="accommodation" />
+      }
+    </div>
+  </section>
 </div>
