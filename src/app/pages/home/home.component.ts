@@ -7,6 +7,7 @@ import {
 import { AccommodationService } from '@core/services/accommodation.service';
 import { Accommodation } from '@core/interfaces';
 import { InfiniteScrollDirective } from 'ngx-infinite-scroll';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -16,6 +17,7 @@ import { InfiniteScrollDirective } from 'ngx-infinite-scroll';
     SearchComponent,
     AccommodationCardComponent,
     InfiniteScrollDirective,
+    NgOptimizedImage,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
