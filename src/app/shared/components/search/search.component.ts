@@ -1,11 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { NgClass } from '@angular/common';
-
 import {
   ButtonComponent,
   DropdownComponent,
   InputComponent,
-} from '@shared/components';
+} from '@shared/components/ui';
 
 @Component({
   selector: 'sh-search',

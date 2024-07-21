@@ -1,8 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { ButtonComponent, StarsComponent } from '@shared/components';
+import { StarsComponent } from '@shared/components';
 import { Accommodation } from '@core/interfaces';
 import { NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { ButtonComponent } from '@shared/components/ui';
 
 @Component({
   selector: 'sh-accommodation-card',

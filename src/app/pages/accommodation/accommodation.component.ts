@@ -1,10 +1,10 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
 
-import { ButtonComponent } from '@shared/components';
 import { Accommodation } from '@core/interfaces';
 import { AccommodationService } from '@core/services';
 import { ActivatedRoute } from '@angular/router';
+import { ButtonComponent } from '@shared/components/ui';
 
 @Component({
   selector: 'app-accommodation',

@@ -4,8 +4,7 @@ import {
   ButtonComponent,
   DropdownComponent,
   InputComponent,
-} from '@shared/components';
-
+} from '@shared/components/ui';
 @Component({
   selector: 'app-root',
   standalone: true,
