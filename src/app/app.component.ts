@@ -5,12 +5,18 @@ import {
   DropdownComponent,
   InputComponent,
 } from '@shared/components/ui';
+import { LayoutComponent } from '@shared/components';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, InputComponent, ButtonComponent, DropdownComponent],
+  imports: [
+    RouterOutlet,
+    InputComponent,
+    ButtonComponent,
+    DropdownComponent,
+    LayoutComponent,
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
 })
 export class AppComponent {
   protected readonly console = console;
